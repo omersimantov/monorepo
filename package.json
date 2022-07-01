@@ -10,17 +10,28 @@
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "predev": "dotenv-checker --schema .env.schema --env .env.local",
+    "prepare": "husky install"
   },
   "devDependencies": {
-    "eslint-config-custom": "*",
-    "prettier": "latest",
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.29.0",
+    "dotenv-checker": "^1.1.5",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
     "turbo": "latest"
   },
   "engines": {
-    "npm": ">=7.0.0",
+    "npm": "please-use-yarn",
     "node": ">=14.0.0"
   },
   "dependencies": {},
-  "packageManager": "yarn@1.22.15"
+  "packageManager": "yarn@1.22.15",
+  "lint-staged": {
+    "*.{ts,tsx,md,mdx,js,jsx,json}": "prettier --write",
+    "*.{ts,tsx,md,mdx,js,jsx}": "eslint --fix --max-warnings=0"
+  }
 }

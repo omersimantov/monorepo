@@ -28,6 +28,32 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
+.env
+.env.*
+!.env.schema
+
+# vercel
+.vercel
+
+# visualStudioCode template
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# local History for Visual Studio Code
+.history/
+
+# typescript
+tsconfig.tsbuildinfo
 
 # turbo
 .turbo
+
+# builds
+dist/**
+
+# linting
+lint-results

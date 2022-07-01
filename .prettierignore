@@ -1,0 +1,17 @@
+node_modules
+.next
+**/**/node_modules
+**/**/.next
+
+*.lock
+*.log
+
+.gitignore
+.prettierignore
+.eslintignore
+.DS_Store
+
+.nvmrc
+.npmrc
+
+.env.*
