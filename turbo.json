@@ -16,6 +16,10 @@
       "cache": false,
       "outputs": []
     },
+    "type-check": {
+      "cache": false,
+      "outputs": []
+    },
     "deploy": {
       "cache": false,
       "dependsOn": ["build", "test", "lint"],
